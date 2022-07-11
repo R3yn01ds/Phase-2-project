@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useMatch, Route } from "react"
+import { Link, useMatch, Route } from "react-router-dom"
 import SinglePage from './SinglePage'
 
 const About = () => {

@@ -83,7 +83,7 @@ const TodoContainer = () => {
             </div>
           </div>
         </Route>
-        <Route path= "/about">
+        <Route path= "/About">
           <About />
         </Route>
         <Route path="*">

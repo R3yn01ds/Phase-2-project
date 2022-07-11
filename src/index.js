@@ -18,6 +18,9 @@
 
 import React from "react"
 import ReactDOM from "react-dom/client";
+import './index.css';
+// import App from './App';
+// import reportWebVitals from './reportWebVitals';
 
 import { BrowserRouter as Router } from "react-router-dom";
 
@@ -27,19 +30,20 @@ import TodoContainer from "./Components/TodoContainer"
 //stylesheet
 import "./App.css"
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App.css />
-  </React.StrictMode>
-);
 
-
-// ReactDOM.render(
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(
 //   <React.StrictMode>
-//     <Router basename={process.env.PUBLIC_URL}>
-//       <TodoContainer />
-//     </Router>  
-//   </React.StrictMode>, 
-//   document.getElementById("root")
+//     <App.css />
+//   </React.StrictMode>
 // );
+
+
+ReactDOM.render(
+  <React.StrictMode>
+    <Router basename={process.env.PUBLIC_URL}>
+      <TodoContainer />
+    </Router>  
+  </React.StrictMode>, 
+  document.getElementById("root")
+);
