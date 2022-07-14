@@ -52,7 +52,7 @@ const Navbar = () => {
                 to={link.path} 
                 // activeclassname="active-link"
                 onClick={() => closeMenu()}
-                exact
+                // exact
               >
                 {link.text}
               </NavLink>
