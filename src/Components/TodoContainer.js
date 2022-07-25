@@ -11,19 +11,23 @@ import Navbar from "./Navbar";
 
 const TodoContainer = () => {
 
-  const [todos, setTodos] = useState(getInitialTodos())
+  const [todos, setTodos] = useState([])
 
   useEffect(() => {
     // storing todos items
+    getInitialTodos()
     const temp = JSON.stringify(todos)
     localStorage.setItem("todos", temp)
   }, [todos])
 
   function getInitialTodos() {
     // getting stored items
-    const temp = localStorage.getItem("todos")
-    const savedTodos = JSON.parse(temp)
-    return savedTodos || [] 
+    fetch('http://localhost:3001/tasks')
+    .then(response => response.json())
+    .then(data => setTodos(data));
+    // const temp = localStorage.getItem("todos")
+    // const savedTodos = JSON.parse(temp)
+    // return savedTodos || [] 
   }
  
   const handleChange = id => {
